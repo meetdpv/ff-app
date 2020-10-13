@@ -1,0 +1,8 @@
+How would you make this deployment fault tolerant and highly available?
+Put the instances behind Elastic Load Balancer (ELB) and Autoscaling Group (ASG). This will ensure that the incoming traffic is distributed between pool of instances available in different availability zones and scale-in or scale-out the instances making it highly available as well as fault tolerant.
+
+How would you make this deployment more secure?
+We can use Hashicorp valut to stores, and controls access to passwords, certificates used in the application.  Also we can use CloudFront, SSL Certificates and AWS WAF to AWS Certification Manager to further secure the application.
+
+How would you make this deployment cloud agnostic?
+ Write Terraform modules to create abstractions which allow similar usage patterns across multiple platforms. The real challenge would be deciding the common set of functionalities and the amount of effort required to make it cloud agnostic.
